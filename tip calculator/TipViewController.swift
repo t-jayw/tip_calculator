@@ -77,7 +77,7 @@ class TipViewController: UIViewController, UITextFieldDelegate {
     func textField(textField: UITextField,
                    shouldChangeCharactersInRange range: NSRange,
                    replacementString string: String) -> Bool {
-        
+        print("i am here")
         // localize decimal separator
         let currentLocale = NSLocale.currentLocale()
         let decimalSeparator = currentLocale.objectForKey(NSLocaleDecimalSeparator) as! String
