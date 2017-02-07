@@ -69,8 +69,8 @@ class TipViewController: UIViewController, UITextFieldDelegate {
     let numberFormatter: NSNumberFormatter = {
         let nf = NSNumberFormatter()
         nf.numberStyle = .DecimalStyle
-        nf.minimumFractionDigits = 0
-        nf.maximumFractionDigits = 0
+        nf.minimumFractionDigits = 2
+        nf.maximumFractionDigits = 2
         return nf
     }()
 
