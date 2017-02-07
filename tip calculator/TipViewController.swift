@@ -2,8 +2,8 @@
 //  TipViewController.swift
 //  Tip Calculator
 //
-//  Created by Tyler Wood on 12/4/16.
-//  Copyright © 2016 Tyler Wood. All rights reserved.
+//  Created by Tyler Wood on 2/6/17.
+//  Copyright © 2017 Tyler Wood. All rights reserved.
 //
 
 import UIKit
