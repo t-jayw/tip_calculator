@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Tab Bar Controller-->
@@ -35,8 +36,39 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="$" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="r9l-zn-CrQ">
-                                <rect key="frame" x="252" y="47" width="97" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="tip amt" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="70o-sV-Iud">
+                                <rect key="frame" x="268" y="190" width="53.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="total amt" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zkw-Wv-cDL">
+                                <rect key="frame" x="266" y="368" width="68" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="04n-8S-ofv">
+                                <rect key="frame" x="501" y="220" width="44" height="65"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="44"/>
+                                <state key="normal" title="😀"/>
+                                <connections>
+                                    <action selector="incrementTip:" destination="dhY-Jd-RGO" eventType="touchUpInside" id="a1d-No-7Ar"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HB6-Y3-pzS">
+                                <rect key="frame" x="55" y="220" width="44" height="65"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="44"/>
+                                <state key="normal" title="😒"/>
+                                <connections>
+                                    <action selector="decrementTip:" destination="dhY-Jd-RGO" eventType="touchUpInside" id="Fp6-BV-96J"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="$" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="r9l-zn-CrQ">
+                                <rect key="frame" x="185" y="35" width="230.5" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="230.5" id="KMG-BU-0J3"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="decimalPad"/>
                                 <connections>
@@ -44,37 +76,21 @@
                                     <outlet property="delegate" destination="dhY-Jd-RGO" id="KFZ-5Q-3C8"/>
                                 </connections>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="tip amt" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="70o-sV-Iud">
-                                <rect key="frame" x="252" y="179" width="204" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="total amt" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zkw-Wv-cDL">
-                                <rect key="frame" x="198" y="326" width="125" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="04n-8S-ofv">
-                                <rect key="frame" x="230" y="239" width="60" height="56"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="44"/>
-                                <state key="normal" title="😀"/>
-                                <connections>
-                                    <action selector="incrementTip:" destination="dhY-Jd-RGO" eventType="touchUpInside" id="a1d-No-7Ar"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HB6-Y3-pzS">
-                                <rect key="frame" x="58" y="239" width="60" height="56"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="44"/>
-                                <state key="normal" title="😒"/>
-                                <connections>
-                                    <action selector="decrementTip:" destination="dhY-Jd-RGO" eventType="touchUpInside" id="Fp6-BV-96J"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="04n-8S-ofv" secondAttribute="trailing" constant="35" id="1uo-Lv-HU0"/>
+                            <constraint firstItem="HB6-Y3-pzS" firstAttribute="leading" secondItem="7JI-i5-emI" secondAttribute="leadingMargin" constant="35" id="2Lm-Wo-VlQ"/>
+                            <constraint firstItem="Zkw-Wv-cDL" firstAttribute="top" secondItem="70o-sV-Iud" secondAttribute="bottom" constant="157" id="8l5-gW-5R5"/>
+                            <constraint firstItem="r9l-zn-CrQ" firstAttribute="top" secondItem="bxD-vi-aig" secondAttribute="bottom" constant="15" id="FWr-pm-I0Y"/>
+                            <constraint firstItem="r9l-zn-CrQ" firstAttribute="centerX" secondItem="7JI-i5-emI" secondAttribute="centerX" id="GAj-9e-xpc"/>
+                            <constraint firstItem="HB6-Y3-pzS" firstAttribute="top" secondItem="bxD-vi-aig" secondAttribute="bottom" constant="200" id="NGO-7s-dyy"/>
+                            <constraint firstItem="70o-sV-Iud" firstAttribute="centerX" secondItem="7JI-i5-emI" secondAttribute="centerX" id="OyN-3x-yrO"/>
+                            <constraint firstItem="04n-8S-ofv" firstAttribute="top" secondItem="bxD-vi-aig" secondAttribute="bottom" constant="200" id="SiN-sb-xhT"/>
+                            <constraint firstItem="70o-sV-Iud" firstAttribute="top" secondItem="r9l-zn-CrQ" secondAttribute="bottom" constant="76" id="TrO-A2-jRF"/>
+                            <constraint firstItem="Zkw-Wv-cDL" firstAttribute="centerX" secondItem="7JI-i5-emI" secondAttribute="centerX" id="x9r-qG-G7W"/>
+                        </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="teE-2s-vtP" appends="YES" id="fkz-aT-02h"/>
                         </connections>
@@ -93,7 +109,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="260" y="-40"/>
+            <point key="canvasLocation" x="232" y="-54"/>
         </scene>
         <!--Item-->
         <scene sceneID="Sjy-D7-AhG">
