@@ -50,7 +50,7 @@ class TipViewController: UIViewController, UITextFieldDelegate {
     
     func updateTipAmountLabel() {
         if let value = tipValue {
-            tipAmountLabel.text = numberFormatter.stringFromNumber(value)
+            tipAmountLabel.text = currencyFormatter.stringFromNumber(value)
         }
         else {
             tipAmountLabel.text = "$"
@@ -59,7 +59,7 @@ class TipViewController: UIViewController, UITextFieldDelegate {
     
     func updateTotalCostLabel() {
         if let total = totalCost {
-            totalCostLabel.text = numberFormatter.stringFromNumber(total)
+            totalCostLabel.text = currencyFormatter.stringFromNumber(total)
         }
         else {
             totalCostLabel.text = "$"
@@ -72,6 +72,13 @@ class TipViewController: UIViewController, UITextFieldDelegate {
         nf.minimumFractionDigits = 2
         nf.maximumFractionDigits = 2
         return nf
+    }()
+    
+    let currencyFormatter: NSNumberFormatter = {
+        let cf = NSNumberFormatter()
+        cf.numberStyle = .CurrencyStyle
+        cf.locale = NSLocale.currentLocale()
+        return cf
     }()
 
     func textField(textField: UITextField,
