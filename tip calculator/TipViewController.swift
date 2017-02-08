@@ -15,6 +15,7 @@ class TipViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         
         print("tip loaded it's view")
+        
     }
     
     @IBOutlet var tipAmountLabel: UILabel!

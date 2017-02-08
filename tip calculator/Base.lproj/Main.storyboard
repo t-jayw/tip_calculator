@@ -109,12 +109,12 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="232" y="-54"/>
+            <point key="canvasLocation" x="228" y="22"/>
         </scene>
-        <!--Item-->
+        <!--Settings-->
         <scene sceneID="Sjy-D7-AhG">
             <objects>
-                <viewController id="LYe-pN-diG" sceneMemberID="viewController">
+                <viewController id="LYe-pN-diG" userLabel="Settings" customClass="SettingsViewController" customModule="tip_calculator" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="GU3-sv-GEi"/>
                         <viewControllerLayoutGuide type="bottom" id="gXf-6O-XDV"/>
@@ -122,11 +122,40 @@
                     <view key="view" contentMode="scaleToFill" id="mRq-8U-Mzg">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Default Tip" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hXF-ja-nSH">
+                                <rect key="frame" x="59" y="82" width="84" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hzz-zK-3x2">
+                                <rect key="frame" x="53" y="118" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="decimalPad"/>
+                                <connections>
+                                    <action selector="textFieldEditingChanged:" destination="LYe-pN-diG" eventType="editingChanged" id="Um6-Be-Vxm"/>
+                                    <outlet property="delegate" destination="LYe-pN-diG" id="raI-wQ-2dS"/>
+                                </connections>
+                            </textField>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="KBr-Bv-JNx" appends="YES" id="boi-XP-HpH"/>
+                        </connections>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="dtc-f1-ggX"/>
+                    <connections>
+                        <outlet property="defTipField" destination="hzz-zK-3x2" id="AjA-kW-WaV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R2J-6I-G4V" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="KBr-Bv-JNx">
+                    <connections>
+                        <action selector="settingDismissKeyboard:" destination="LYe-pN-diG" id="9qA-Hs-g4r"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="893" y="27"/>
         </scene>
