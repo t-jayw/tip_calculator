@@ -124,6 +124,18 @@ class TipViewController: UIViewController, UITextFieldDelegate {
         textField.resignFirstResponder()
     }
 
+    @IBAction func incrementTip(sender: AnyObject) {
+        tipRate += 1
+        updateTotalCostLabel()
+        updateTipAmountLabel()
+    }
+    
+    @IBAction func decrementTip(sender: AnyObject) {
+        tipRate -= 1
+        updateTotalCostLabel()
+        updateTipAmountLabel()
+    }
+
 
 }
 
