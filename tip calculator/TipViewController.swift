@@ -2,7 +2,7 @@
 //  TipViewController.swift
 //  Tip Calculator
 //
-//  Created by Tyler Wood on 2/6/17.
+//  Created by Tyler Wood on 2/6/17
 //  Copyright © 2017 Tyler Wood. All rights reserved.
 //
 
@@ -53,7 +53,7 @@ class TipViewController: UIViewController, UITextFieldDelegate {
             tipAmountLabel.text = numberFormatter.stringFromNumber(value)
         }
         else {
-            tipAmountLabel.text = "???"
+            tipAmountLabel.text = "$"
         }
     }
     
@@ -62,7 +62,7 @@ class TipViewController: UIViewController, UITextFieldDelegate {
             totalCostLabel.text = numberFormatter.stringFromNumber(total)
         }
         else {
-            totalCostLabel.text = "???"
+            totalCostLabel.text = "$"
         }
     }
     
@@ -113,6 +113,9 @@ class TipViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
+    @IBAction func dismissKeyboard(sender: AnyObject) {
+        textField.resignFirstResponder()
+    }
 
 
 }
