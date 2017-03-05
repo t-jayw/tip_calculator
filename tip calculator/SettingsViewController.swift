@@ -6,8 +6,6 @@ class SettingsViewController: UIViewController, UITextFieldDelegate {
         // ALways call the super implementation of viewDidLoad
         super.viewDidLoad()
         
-        print("settings loaded it's view")
-        
         defTipField.text = numberFormatter.stringFromNumber(userDefaults.userDefaultTipSetting)
     }
 

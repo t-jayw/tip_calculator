@@ -13,21 +13,15 @@ class TipViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         // ALways call the super implementation of viewDidLoad
         super.viewDidLoad()
-        
-        
-        
-        print("tip loaded it's view")
-        
-        print(userDefaults.userDefaultTipSetting)
-        
     }
     
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
+        tipRate = Double(userDefaults.userDefaultTipSetting)
+
         updateTotalCostLabel()
         updateTipAmountLabel()
-        tipRate = Double(userDefaults.userDefaultTipSetting)
         updateTipRateLabel()
         
     }
@@ -70,7 +64,7 @@ class TipViewController: UIViewController, UITextFieldDelegate {
             tipAmountLabel.text = currencyFormatter.stringFromNumber(value)
         }
         else {
-            tipAmountLabel.text = "$"
+            tipAmountLabel.text = ""
         }
     }
     
@@ -79,7 +73,7 @@ class TipViewController: UIViewController, UITextFieldDelegate {
             totalCostLabel.text = currencyFormatter.stringFromNumber(total)
         }
         else {
-            totalCostLabel.text = "$"
+            totalCostLabel.text = ""
         }
     }
     
@@ -158,7 +152,6 @@ class TipViewController: UIViewController, UITextFieldDelegate {
         updateTotalCostLabel()
         updateTipAmountLabel()
         updateTipRateLabel()
-        print(userDefaults.userDefaultTipSetting)
     }
     
     @IBAction func decrementTip(sender: AnyObject) {
