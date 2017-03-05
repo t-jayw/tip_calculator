@@ -109,7 +109,7 @@
                         <outlet property="textField" destination="r9l-zn-CrQ" id="DkF-ds-yaz"/>
                         <outlet property="tipAmountLabel" destination="70o-sV-Iud" id="jEN-zF-qxp"/>
                         <outlet property="totalCostLabel" destination="Zkw-Wv-cDL" id="k2G-51-D2f"/>
-                        <outlet property="userDefaultTipSEtting" destination="g0C-pf-dXe" id="YE6-tz-FGp"/>
+                        <outlet property="userDefaultTipSetting" destination="g0C-pf-dXe" id="EOq-ML-1iF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SbY-Cb-tfd" userLabel="First Responder" sceneMemberID="firstResponder"/>

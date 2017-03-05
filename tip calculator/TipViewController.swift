@@ -27,17 +27,18 @@ class TipViewController: UIViewController, UITextFieldDelegate {
         super.viewWillAppear(animated)
         updateTotalCostLabel()
         updateTipAmountLabel()
-    
+        tipRate = Double(userDefaults.userDefaultTipSetting)
+        updateTipRateLabel()
+        
     }
     
     
     @IBOutlet var tipAmountLabel: UILabel!
     @IBOutlet var totalCostLabel: UILabel!
     @IBOutlet var textField: UITextField!
-    @IBOutlet var userDefaultTipSEtting: UILabel!
+    @IBOutlet var userDefaultTipSetting: UILabel!
     
     var tipRate = Double(userDefaults.userDefaultTipSetting)
-    
     
     var basePriceValue: Double? {
         didSet {
@@ -48,7 +49,7 @@ class TipViewController: UIViewController, UITextFieldDelegate {
     
     var tipValue: Double? {
         if let value = basePriceValue {
-            return (value * (Double(userDefaults.userDefaultTipSetting)/100))
+            return (value * (tipRate/100))
         }
         else {
             return nil
@@ -82,12 +83,24 @@ class TipViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
+    func updateTipRateLabel() {
+        userDefaultTipSetting.text = tipFormatter.stringFromNumber(tipRate)
+    }
+    
     let numberFormatter: NSNumberFormatter = {
         let nf = NSNumberFormatter()
         nf.numberStyle = .DecimalStyle
         nf.minimumFractionDigits = 2
         nf.maximumFractionDigits = 2
         return nf
+    }()
+    
+    let tipFormatter: NSNumberFormatter = {
+        let tf = NSNumberFormatter()
+        tf.numberStyle = .DecimalStyle
+        tf.minimumFractionDigits = 0
+        tf.maximumFractionDigits = 0
+        return tf
     }()
     
     let currencyFormatter: NSNumberFormatter = {
@@ -141,16 +154,18 @@ class TipViewController: UIViewController, UITextFieldDelegate {
     }
 
     @IBAction func incrementTip(sender: AnyObject) {
-        userDefaults.userDefaultTipSetting += 1
+        tipRate += 1
         updateTotalCostLabel()
         updateTipAmountLabel()
+        updateTipRateLabel()
         print(userDefaults.userDefaultTipSetting)
     }
     
     @IBAction func decrementTip(sender: AnyObject) {
-        userDefaults.userDefaultTipSetting -= 1
+        tipRate -= 1
         updateTotalCostLabel()
         updateTipAmountLabel()
+        updateTipRateLabel()
         
     }
 
