@@ -13,6 +13,7 @@
 		8A2D3B421E497D8100E87D07 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A2D3B411E497D8100E87D07 /* Assets.xcassets */; };
 		8A2D3B451E497D8100E87D07 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A2D3B431E497D8100E87D07 /* LaunchScreen.storyboard */; };
 		8A2D3B4D1E4BA69100E87D07 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A2D3B4C1E4BA69100E87D07 /* SettingsViewController.swift */; };
+		8AF339921E5A31370022E4A6 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF339911E5A31370022E4A6 /* UserDefaults.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		8A2D3B441E497D8100E87D07 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8A2D3B461E497D8100E87D07 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8A2D3B4C1E4BA69100E87D07 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		8AF339911E5A31370022E4A6 /* UserDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			children = (
 				8A2D3B3A1E497D8100E87D07 /* AppDelegate.swift */,
 				8A2D3B3C1E497D8100E87D07 /* TipViewController.swift */,
+				8AF339911E5A31370022E4A6 /* UserDefaults.swift */,
 				8A2D3B4C1E4BA69100E87D07 /* SettingsViewController.swift */,
 				8A2D3B3E1E497D8100E87D07 /* Main.storyboard */,
 				8A2D3B411E497D8100E87D07 /* Assets.xcassets */,
@@ -139,6 +142,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8AF339921E5A31370022E4A6 /* UserDefaults.swift in Sources */,
 				8A2D3B3D1E497D8100E87D07 /* TipViewController.swift in Sources */,
 				8A2D3B3B1E497D8100E87D07 /* AppDelegate.swift in Sources */,
 				8A2D3B4D1E4BA69100E87D07 /* SettingsViewController.swift in Sources */,

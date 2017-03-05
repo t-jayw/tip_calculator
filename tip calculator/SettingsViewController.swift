@@ -7,8 +7,10 @@ class SettingsViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         
         print("settings loaded it's view")
+        
+        defTipField.text = numberFormatter.stringFromNumber(userDefaults.userDefaultTipSetting)
     }
-    
+
 
     @IBOutlet var defTipField: UITextField!
     
@@ -16,6 +18,7 @@ class SettingsViewController: UIViewController, UITextFieldDelegate {
         didSet {
             if let val = numberFormatter.numberFromString(defTipField.text!) {
                 print(val)
+                userDefaults.userDefaultTipSetting = val.integerValue
             }
             else {
             }
@@ -81,6 +84,8 @@ class SettingsViewController: UIViewController, UITextFieldDelegate {
         defTipField.resignFirstResponder()
     }
     
+    
+
     
     
 }
