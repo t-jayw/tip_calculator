@@ -27,7 +27,7 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-<img src='https://gifyu.com/images/tipcalc.md.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='http://i.imgur.com/KW89dIA.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
@@ -35,7 +35,7 @@ GIF created with [LiceCap](http://www.cockos.com/licecap/).
 ## Notes
 
 I get an F for following instructions. Upon reading "Create a tip calculator with input for subtotal and a settings page with default tip amount", I set out to do just that without scrolling down and seeing that you actually provided a walkthrough of exactly how to do it. 
-Hopefully, I get an A for demonstrating a capacity for self-directed learning and stick-to-it-iveness for completing the project my own way.
+Hopefully, I get an A for demonstrating a capacity for self-directed learning and stick-to-it-iveness for completing the project my own way. 
 
 
 ## License
