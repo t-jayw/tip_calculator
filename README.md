@@ -21,6 +21,7 @@ The following **optional** features are implemented:
 
 The following **additional** features are implemented:
 
+- [x] Input validation w/ textfield delegate for subtotal field (numeric only, one decimal only) 
 - [x] Real time sentiment input field that adjusts tip rate and all related fields without adjusting user defined default. 
 
 ## Video Walkthrough 
