@@ -15,7 +15,6 @@ class SettingsViewController: UIViewController, UITextFieldDelegate {
     var defTipRate: Double? {
         didSet {
             if let val = numberFormatter.numberFromString(defTipField.text!) {
-                print(val)
                 userDefaults.userDefaultTipSetting = val.integerValue
             }
             else {
